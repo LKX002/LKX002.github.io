@@ -1,0 +1,75 @@
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.o-hidden {
+    overflow: hidden;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.top-10px {
+    top: 10px;
+}
+
+.bottom-10px {
+    bottom: 10px;
+}
+
+.right {
+    right:0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.font-monospace {
+    font-family: monospace;
+}
+
+.font-2em {
+    font-size: 2em;
+}
+
+.on-top {
+    z-index: 1;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.position-relative {
+    position: relative;
+}
+
+html, body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.a-enter-vr {
+    display: none;
+}
+
+.center-div {
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.text-red {
+    color: red;
+}
+
+.text-green {
+    color: green;
+}

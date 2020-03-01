@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Containers for our components -->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <!-- Actual tracking library -->
+
+    <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+    <!-- <script src="aframe-ar.js"></script> -->
+    <!-- Allow for animation-->
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item
+          id="tree-obj"
+          src="models/2003_CowboyRoy_2MB_Einscan.obj"
+        ></a-asset-item>
+        <a-asset-item
+          id="tree-mtl"
+          src="models/2003_CowboyRoy_2MB_Einscan.mtl"
+        ></a-asset-item>
+      </a-assets>
+
+      <a-marker preset="hiro" id="">
+        <a-entity
+          obj-model="obj: #tree-obj; mtl: #tree-mtl"
+          position="0 -1 -1"
+          animation="property: rotation; from:359 0 0; to: 0 0 0; easing: linear; dur: 5000; repeat: indefinite; loop:true;"
+          scale="0.001 0.001 0.001"
+        ></a-entity>
+      </a-marker>
+    </a-scene>
+  </body>
+</html>
