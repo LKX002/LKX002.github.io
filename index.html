@@ -1,83 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-    />
     <meta charset="UTF-8" />
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-
-    <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
-    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
-    <link href="style.css" rel="stylesheet" type="text/css" media="all" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LKX002</title>
   </head>
-  <body style="margin : 0px; overflow: hidden; font-family: Monospace;">
-    <a-scene
-      arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; patternRatio:0.85;"
-      loading-screen="dotsColor: white; backgroundColor: black"
+  <body>
+    <model-viewer
+      bounds="tight"
+      src="/cow-boy-roy/bf_culled.glb"
+      ar
+      ar-modes="scene-viewer webxr quick-look"
+      camera-controls
+      environment-image="neutral"
+      shadow-intensity="1"
     >
-      <a-assets>
-        <a-asset-item
-          id="tree-obj"
-          src="models/2003_CowboyRoy_2MB_Einscan.obj"
-        ></a-asset-item>
-        <a-asset-item
-          id="tree-mtl"
-          src="models/2003_CowboyRoy_2MB_Einscan.mtl"
-        ></a-asset-item>
-      </a-assets>
-
-      <a-marker type="pattern" url="markers/marker-red-85.patt">
-        <a-entity
-          obj-model="obj: #tree-obj; mtl: #tree-mtl"
-          rotation="45 90 0"
-          scale="0.004 0.004 0.004"
-        ></a-entity>
-      </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
-
-    <!-- <div class="modal" tabindex="-1" role="dialog" id="modal">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Welcome to LKX002</h5>
-            <button
-              type="button"
-              class="close dismiss"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>
-              Please point your camera at the following marker on the product in
-              front of you.
-              <img src="markers/product-marker.png" class="img-fluid" />
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">
-              Ok
-            </button>
-          </div>
-        </div>
+      <!-- ios-src="untitled.usdz" -->
+      <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
       </div>
-    </div> -->
+      <button slot="ar-button" id="ar-button">View in your space</button>
+      <div id="ar-prompt">
+        <img src="/shared/ar_hand_prompt.png" />
+      </div>
+    </model-viewer>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
