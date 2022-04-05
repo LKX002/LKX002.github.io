@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.17e50649.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LKX002</title>
+    <script type="module" crossorigin src="/assets/index.00a58d7b.js"></script>
+    <link rel="stylesheet" href="/assets/index.2e763489.css">
+  </head>
+  <body>
+    <model-viewer
+      bounds="tight"
+      src="/cow-boy-roy/bf_culled.glb"
+      ar
+      ar-modes="scene-viewer webxr quick-look"
+      camera-controls
+      environment-image="neutral"
+      shadow-intensity="1"
+    >
+      <!-- ios-src="untitled.usdz" -->
+      <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">View in your space</button>
+      <div id="ar-prompt">
+        <img src="/shared/ar_hand_prompt.png" />
+      </div>
+    </model-viewer>
+    
+  </body>
+</html>
