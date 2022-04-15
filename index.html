@@ -3,26 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#c6daf4" />
     <title>LKX002</title>
+    <meta name="description" content="Summon Cowboy Roy" />
+    <meta property="og:title" content="LKX002" />
+    <meta property="og:url" content="https://LKX002.github.io" />
+    <meta property="og:image" content="/shared/poster.webp" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Summon Cowboy Roy" />
   </head>
   <body>
     <model-viewer
       bounds="tight"
-      src="/cow-boy-roy/bf_culled.glb"
+      src="/cow-boy-roy/model.glb"
+      ios-src="/cow-boy-roy/ios.usdz"
       ar
       ar-modes="scene-viewer webxr quick-look"
       camera-controls
       environment-image="neutral"
       shadow-intensity="1"
-      ios-src="/cow-boy-roy/bf-culled.usdz"
+      touch-action="none"
     >
-      <div class="progress-bar hide" slot="progress-bar">
-        <div class="update-bar"></div>
-      </div>
-      <button slot="ar-button" id="ar-button">Summon Cowboy Roy!</button>
-      <div id="ar-prompt">
-        <img src="/shared/ar_hand_prompt.png" />
+      <div id="button-container" slot="ar-button">
+        <button id="ar-prompt">
+          <img src="/shared/btn-background.png" />
+          <span class="sr-only">Click to Summon Cowboy Roy</span>
+        </button>
       </div>
     </model-viewer>
     <script type="module" src="/src/main.ts"></script>
